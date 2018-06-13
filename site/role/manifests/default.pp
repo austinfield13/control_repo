@@ -1,4 +1,4 @@
 class role::default {
   include profile::base
-  include profile::setup_7zip
+  include profile::setup_eclipse
 }
