@@ -1,4 +1,4 @@
-class profile {'setup_eclipse':
+class profile::setup_eclipse{
   file {'C:/opt/eclipse':
     before     => 'unzip',
     ensure     => directory,
