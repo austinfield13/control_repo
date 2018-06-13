@@ -1,3 +1,4 @@
 mod 'puppetlabs/concat'
-mod 'pltraining/dockeragent'
 mod 'garethr/docker'
+mod 'pltraining/dockeragent'
+
