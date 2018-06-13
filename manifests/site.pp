@@ -10,4 +10,8 @@ node /^web/ {
 node /^db/ {
   include role::db_server
 }
+
+node 'agent.puppet.vm' {
+  include role::base
+}
   
