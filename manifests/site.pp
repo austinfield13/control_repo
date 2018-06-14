@@ -12,6 +12,6 @@ node /^db/ {
 }
 
 node 'agent.puppet.vm' {
-  include role::default
+  
 }
   
