@@ -1,4 +1,10 @@
 class profile::setup_eclipse{
+
+  file {'C:\opt\eclipse':
+    before     => File['C:\opt\eclipse\eclipse.zip'],
+    ensure     => directory,
+  }
+  
   file {'C:\opt\eclipse\eclipse.zip':
     before     => Exec['unzip'],
     ensure     => present,
