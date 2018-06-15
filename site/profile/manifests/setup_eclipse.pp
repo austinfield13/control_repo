@@ -1,12 +1,12 @@
 class profile::setup_eclipse{
-  file {'C:\opt\Test\README.txt':
-#    before     => Exec['unzip'],
+  file {'C:\opt\eclipse\eclipse.zip':
+    before     => Exec['unzip'],
     ensure     => present,
-    source     => 'S:\eclipse\README.txt',
+    source     => 'S:\eclipse\eclipse-jee-oxygen-3a-win32-x86_64.zip',
   }
 
-#  exec {'unzip':
-#    require    => File['C:\opt\eclipse\eclipse.zip'],
-#    command    =>"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command Expand-Archive -Path 'C:\opt\eclipse\eclipse.zip' -DestinationPath 'C:\opt\eclipse'",
-#  }
+  exec {'unzip':
+    require    => File['C:\opt\eclipse\eclipse.zip'],
+    command    =>"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command Expand-Archive -Path 'C:\opt\eclipse\eclipse.zip' -DestinationPath 'C:\opt\eclipse'",
+  }
 }
