@@ -1,5 +1,6 @@
 class profile::setup_7zip {
-  package {'7zip':
-    ensure          => present,
-    source          => 'https://www.7-zip.org/download.html',}
+  exec {'7zip':
+    command    => Install-7Zip.ps1,
+    path       => 'S:/7zip',
+  }
 }
