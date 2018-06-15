@@ -2,7 +2,7 @@ class profile::setup_eclipse{
   file {'C:/opt/eclipse/eclipse.zip':
     before     => Exec['unzip'],
     ensure     => present,
-    source     =>'S:/eclipse/eclipse-jee-oxygen-3a-win32-x86_64.zip',
+    source     =>["S:/eclipse/eclipse-jee-oxygen-3a-win32-x86_64.zip"],
   }
 
   exec {'unzip':
