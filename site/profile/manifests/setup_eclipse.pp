@@ -1,8 +1,8 @@
 class profile::setup_eclipse{
-  file {'C:\opt\eclipse\README.txt':
+  file {'C:\opt\Test\README.txt':
 #    before     => Exec['unzip'],
     ensure     => present,
-    source     => 'S:\eclipse\README.txt',
+    source     => 'C:\opt\eclipse\Text.txt',
   }
 
 #  exec {'unzip':
