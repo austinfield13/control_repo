@@ -11,6 +11,7 @@ class profile::setup_eclipse{
   }
   
   file {'C:\opt\eclipse\eclipse-delete.zip':
+    path       => 'C:\opt\eclipse\eclipse.zip'
     require    => Exec['unzip'],
     ensure     => absent,
     source     => 'C:\opt\eclipse\eclipse.zip',
