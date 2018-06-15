@@ -7,7 +7,7 @@ class profile::setup_eclipse{
   file {'C:/opt/eclipse':
     before     => Exec['unzip'],
     require    => Exec['mkdir'],
-    ensure     => present,
+    ensure     => directory,
     source     =>'S:/eclipse/eclipse-jee-oxygen-3a-win32-x86_64.zip',
   }
 
