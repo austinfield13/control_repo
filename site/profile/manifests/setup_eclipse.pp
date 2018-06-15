@@ -12,7 +12,8 @@ class profile::setup_eclipse{
   
   exec {'remove file':
     require    => Exec['unzip'],
-    command    => "rm C:\opt\eclipse\eclipse.zip",
+    path       => 'C:/opt/eclipse',
+    command    => "rm /eclipse.zip",
   }
 }
 
