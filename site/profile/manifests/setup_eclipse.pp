@@ -10,7 +10,7 @@ class profile::setup_eclipse{
     command    =>"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command Expand-Archive -Path 'C:\opt\eclipse\eclipse.zip' -DestinationPath 'C:\opt\eclipse'",
   }
   
-  file {'C:\opt\eclipse\eclipse.zip':
+  file {'C:\opt\eclipse\eclipse-delete.zip':
     require    => Exec['unzip'],
     ensure     => absent,
     source     => 'C:\opt\eclipse\eclipse.zip',
