@@ -3,7 +3,7 @@ class profile::setup_atom{
 
   file {'C:\opt\atom':
 
-    before     => File['C:\opt\eclipse\eclipse.zip'],
+    before     => File['C:\opt\atom\atom.zip'],
     ensure     => directory,
 
   }
@@ -18,7 +18,7 @@ class profile::setup_atom{
 
   exec {'unzip':
 
-    require    => File['C:\opt\eclipse\eclipse.zip'],
+    require    => File['C:\opt\atom\atom.zip'],
     command    =>"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command Expand-Archive -Path 'C:\opt\atom\atom.zip' -DestinationPath 'C:\opt\atom'",
 
   }
