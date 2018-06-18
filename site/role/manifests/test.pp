@@ -1,3 +1,3 @@
 class role::test{
-  include profile setup_atom
+  include profile::setup_atom
 }
