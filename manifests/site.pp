@@ -9,5 +9,6 @@ node 'alcor' {
   #include setup_atom
   #include setup_ads
   include setup_docker
+  include setup_firefox
 }
 
