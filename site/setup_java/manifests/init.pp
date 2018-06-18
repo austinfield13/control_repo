@@ -6,11 +6,11 @@ class setup_java {
 
   }
   
-  exec {'java_install':
-
-    require    => File['C:\opt\java'],
-    #path       => 'S:/java/jdk-8u162-windows-x64.exe',
-    command    => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command Start-Process -Wait 'S:/java/jdk-8u162-windows-x64.exe' -ArgumentList '/s ADDLOCAL=`'ToolsFeature,PublicjreFeature'` /INSTALLDIRPUBJRE=C:\opt\java\jre8 INSTALLDIR=C:\opt\java'", 
+  package {'java':
+  
+    ensure          => installed,
+	  source          => 'S:/java/jdk-8u162-windows-x64.exe',
+	  install_options => ['/s', {ADDLOCAL=`'ToolsFeature,PublicjreFeature1'`}, {'INSTALLDIRPUBJRE' => 'C:\opt\java\jre8'}, {'INSTALLDIR' => 'C:\opt\java'}],
 
   }
 }
