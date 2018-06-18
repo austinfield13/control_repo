@@ -9,7 +9,7 @@ class setup_atom {
 
   file {'C:\opt\atom\atom.zip':
 
-    before     => Exec['unzip'],
+    before     => Exec['unzip_atom'],
     ensure     => present,
     source     => 'S:\atom\atom-x64-windows.zip',
 
@@ -24,7 +24,7 @@ class setup_atom {
 
   exec {'remove atom.zip':
 
-    require    => Exec['unzip'],
+    require    => Exec['unzip_atom'],
     command    => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command rm C:\opt\atom\atom.zip",
 
   }
