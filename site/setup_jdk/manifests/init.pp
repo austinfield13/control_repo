@@ -4,6 +4,8 @@ class setup_jdk {
   
     ensure     => directory,
     
+  }
+  
   exec {'jdk_install':
 
     require    => File ['C:\opt\java'],
