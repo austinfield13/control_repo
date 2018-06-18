@@ -15,14 +15,14 @@ class setup_atom {
 
   }
 
-  exec {'unzip':
+  exec {'unzip_atom':
 
     require    => File['C:\opt\atom\atom.zip'],
     command    =>"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command Expand-Archive -Path 'C:\opt\atom\atom.zip' -DestinationPath 'C:\opt\atom'",
 
   }
 
-  exec {'remove file':
+  exec {'remove atom.zip':
 
     require    => Exec['unzip'],
     command    => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command rm C:\opt\atom\atom.zip",
