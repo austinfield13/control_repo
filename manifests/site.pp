@@ -8,6 +8,6 @@ node 'alcor' {
   #include setup_7zip
   #include setup_atom
   #include setup_ads
-  inlucde setup_docker
+  include setup_docker
 }
 
