@@ -4,28 +4,34 @@ class setup_eclipse {
 
     before     => File['C:\opt\eclipse\eclipse.zip'],
     ensure     => directory,
-
+	
   }
 
-  file {'C:\opt\eclipse\eclipse.zip':
+  unless $removed_zip == 1 {
 
-    before     => Exec['unzip_eclipse'],
-    ensure     => present,
-    source     => 'S:\eclipse\eclipse-jee-oxygen-3a-win32-x86_64.zip',
+    file {'C:\opt\eclipse\eclipse.zip':
 
-  }
+      require    => File['C:\opt\eclipse'],
+      ensure     => present,
+      source     => 'S:\eclipse\eclipse-jee-oxygen-3a-win32-x86_64.zip',
 
-  exec {'unzip_eclipse':
+    }
 
-    require    => File['C:\opt\eclipse\eclipse.zip'],
-    command    =>"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command Expand-Archive -Path 'C:\opt\eclipse\eclipse.zip' -DestinationPath 'C:\opt\eclipse'",
+    exec {'unzip_eclipse':
 
-  }
+      require    => File['C:\opt\eclipse\eclipse.zip'],
+      command    =>"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command Expand-Archive -Path 'C:\opt\eclipse\eclipse.zip' -DestinationPath 'C:\opt\eclipse'",
+    
+	}
 
-  exec {'remove eclipse.zip':
+    exec {'remove eclipse.zip':
 
-    require    => Exec['unzip_eclipse'],
-    command    => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command rm C:\opt\eclipse\eclipse.zip",
+      require    => Exec['unzip_eclipse'],
+      command    => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command rm C:\opt\eclipse\eclipse.zip",
+
+    }
+
+  $removed_zip = 1
 
   }
 }
