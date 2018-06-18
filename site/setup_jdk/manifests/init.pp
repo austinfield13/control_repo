@@ -1,0 +1,3 @@
+class setup_jdk {
+
+}
