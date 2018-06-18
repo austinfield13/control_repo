@@ -9,22 +9,22 @@ class setup_eclipse {
 
   file {'C:\opt\eclipse\eclipse.zip':
 
-    before     => Exec['unzip'],
+    before     => Exec['unzip_eclipse'],
     ensure     => present,
     source     => 'S:\eclipse\eclipse-jee-oxygen-3a-win32-x86_64.zip',
 
   }
 
-  exec {'unzip':
+  exec {'unzip_eclipse':
 
     require    => File['C:\opt\eclipse\eclipse.zip'],
     command    =>"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command Expand-Archive -Path 'C:\opt\eclipse\eclipse.zip' -DestinationPath 'C:\opt\eclipse'",
 
   }
 
-  exec {'remove file':
+  exec {'remove eclipse.zip':
 
-    require    => Exec['unzip'],
+    require    => Exec['unzip_eclipse'],
     command    => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command rm C:\opt\eclipse\eclipse.zip",
 
   }
