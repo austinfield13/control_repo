@@ -15,6 +15,7 @@ node 'alcor' {
   #include setup_hipchat
   #include setup_hyperv
   #include setup_jetbrains
-  include setup_kse
+  #include setup_kse
+  include setup_maven
 }
 
