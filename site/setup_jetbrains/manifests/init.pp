@@ -9,8 +9,8 @@ class setup_jetbrains {
   package {'pycharm':
   
     ensure          => installed,
-	  source          => 'S:\jetbrains\pycharm-community-2018.1.1.exe',
-	  install_options => ['/S', {'/CONFIG' => 'S:\jetbrains\pycharm.silent.config'}, {'/D' => 'C:\opt\pycharm'}],
+    source          => 'S:\jetbrains\pycharm-community-2018.1.1.exe',
+    install_options => ['/S', {'/CONFIG' => 'S:\jetbrains\pycharm.silent.config'}, {'/D' => 'C:\opt\pycharm'}],
 	
   }
 
@@ -23,8 +23,8 @@ class setup_jetbrains {
   package {'intellij':
   
     ensure          => installed,
-	  source          => 'S:\jetbrains\ideaIC-2018.1.1.exe',
-	  install_options => ['/S', {'/CONFIG' => 'S:\jetbrains\intellij.silent.config'}, {'/D' => 'C:\opt\intellij'}],
+    source          => 'S:\jetbrains\ideaIC-2018.1.1.exe',
+    install_options => ['/S', {'/CONFIG' => 'S:\jetbrains\intellij.silent.config'}, {'/D' => 'C:\opt\intellij'}],
 	
   }
 }
