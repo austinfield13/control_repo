@@ -10,7 +10,7 @@ class setup_firefox {
 
     ensure           => installed,
     source           => 'S:/firefox/Firefox Setup 60.0.1.exe',
-    install_options  => [{'/INI' = 'S:\firefox\firefox-install.ini'}],
+    install_options  => [{'/INI' => 'S:\firefox\firefox-install.ini'}],
 
   }
 
