@@ -10,7 +10,7 @@ class setup_git {
 
     ensure          => installed,
     source          => 'S:/git/Git-2.16.2-64-bit.exe',
-    install_options => [{'/configure' => 'S:\git\git-install.ini'}],
+    install_options => [{'/configure' => 'S:\git\git-install.ini'}, '/s'],
 
   }
 }
