@@ -10,7 +10,7 @@ class setup_jetbrains {
   
     ensure          => installed,
     source          => 'S:\jetbrains\pycharm-community-2018.1.1.exe',
-    install_options => ['/S', {'/CONFIG' => 'S:\jetbrains\pycharm.silent.config'}, {'/D' => 'C:\opt\pycharm'}],
+    install_options => ['/S', {'/CONFIG' => 'S:\jetbrains\pycharm.silent.config'}, {'/D' => 'C:\opt\pycharm'}, {'DISABLEDESKTOPSHORTCUT' => '1'}],
 	
   }
 
@@ -24,7 +24,7 @@ class setup_jetbrains {
   
     ensure          => installed,
     source          => 'S:\jetbrains\ideaIC-2018.1.1.exe',
-    install_options => ['/S', {'/CONFIG' => 'S:\jetbrains\intellij.silent.config'}, {'/D' => 'C:\opt\intellij'}],
+    install_options => ['/S', {'/CONFIG' => 'S:\jetbrains\intellij.silent.config'}, {'/D' => 'C:\opt\intellij'}, {'DISABLEDESKTOPSHORTCUT' => '1'}],
 	
   }
 }
