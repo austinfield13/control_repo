@@ -10,7 +10,7 @@ class setup_gpg {
 
     ensure          => installed,
     source          => 'S:/gpg/gpg4win-3.1.0.exe',
-    install_options => [{'INSTALLDIR' => 'C:\opt\gpg'}, '/s'],
+    install_options => [{'INSTALLDIR' => 'C:\opt\gpg'}, '-ms'],
 
   }
 }
