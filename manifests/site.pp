@@ -13,6 +13,7 @@ node 'alcor' {
   #include setup_git
   #include setup_gpg
   #include setup_hipchat
-  include setup_hyperv
+  #include setup_hyperv
+  include setup_jetbrains
 }
 
