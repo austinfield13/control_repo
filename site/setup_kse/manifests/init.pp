@@ -9,8 +9,8 @@ class setup_kse {
   package {'kse':
   
     ensure         => installed,
-	source         => 'S:\kse\kse-532-setup.exe',
-	install_optons => ['/S', {'/DIR' => 'C:\opt\kse'}]
+    source         => 'S:\kse\kse-532-setup.exe',
+    install_optons => ['/S', {'/DIR' => 'C:\opt\kse'}]
 	
   }
 }
