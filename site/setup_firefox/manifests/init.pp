@@ -1,11 +1,17 @@
 class setup_firefox {
 
-  package {'firefox':
+  file {'C:\opt\firefox':
   
+    ensure           => directory,
+	
+  }
+
+  package {'firefox':
+
     ensure           => installed,
     source           => 'S:/firefox/Firefox Setup 60.0.1.exe',
-    install_options  => ['/InstallDirectoryPath' => 'C:\opt\firefox', '/S'],
-    
+    install_options  => ['/InstallDirectoryPath' => 'C:\opt\firefox'],
+
   }
 
 }
