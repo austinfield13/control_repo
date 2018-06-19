@@ -17,6 +17,7 @@ node 'alcor' {
   #include setup_jetbrains
   #include setup_kse
   #include setup_maven
-  include setup_nerdfonts
+  #include setup_nerdfonts
+  include setup_pgadmin
 }
 
