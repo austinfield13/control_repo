@@ -2,7 +2,7 @@ class setup_docker {
 
   file {'C:\opt\docker':
     
-	  ensure            => directory,
+    ensure            => directory,
 	
   }
 
