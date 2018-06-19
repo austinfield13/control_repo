@@ -3,7 +3,7 @@ node default {
   #include setup_python
 }
 node 'alcor' {
-  #include setup_java
+  include setup_java
   #include setup_eclipse
   #include setup_7zip
   #include setup_atom
