@@ -8,8 +8,8 @@ class setup_docker {
 
   package {'docker':
     ensure            => present,
-    #source            => 'S:\docker\Docker for Windows Installer.exe',
-    #install_options   => ['/S', {'INSTALLDIR' => 'C:\opt\docker'}],
+    source            => 'S:\docker\Docker for Windows Installer.exe',
+    install_options   => ['/S', {'INSTALLDIR' => 'C:\opt\docker'}],
 	
   }
 }
