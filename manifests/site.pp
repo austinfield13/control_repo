@@ -18,6 +18,7 @@ node 'alcor' {
   #include setup_kse
   #include setup_maven
   #include setup_nerdfonts
-  include setup_pgadmin
+  #include setup_pgadmin
+  include setup_putty
 }
 
