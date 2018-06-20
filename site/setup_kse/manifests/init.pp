@@ -10,7 +10,7 @@ class setup_kse {
   
     ensure         => installed,
     source         => 'S:\kse\kse-532-setup.exe',
-    install_optons => ['/S', '/D=C:\opt\kse']
+    install_options => ['/S', '/D=C:\opt\kse']
 	
   }
 }
