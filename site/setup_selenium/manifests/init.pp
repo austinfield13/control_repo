@@ -10,6 +10,7 @@ class setup_selenium {
   
     ensure           => directory,
     source           => 'S:\selenium\chrome',
+    recurse          => remote,
 	
   }
 
@@ -17,6 +18,7 @@ class setup_selenium {
   
     ensure           => directory,
     source           => 'S:\selenium\firefox',
+    recurse          => remote,
 	
   }
 
@@ -24,6 +26,7 @@ class setup_selenium {
   
     ensure           => directory,
     source           => 'S:\selenium\IE',
+    recurse          => remote,
 	
   }
 }
