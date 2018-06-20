@@ -1,7 +1,5 @@
 class setup_w10_offnet_sophosdx {
 
-class setup_w10_offnet_sophosdx {
-
   file {'C:\opt\W10-OffNet-SophosDX':
   
     ensure          => directory,
