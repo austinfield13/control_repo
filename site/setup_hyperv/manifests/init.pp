@@ -8,7 +8,7 @@ class setup_hyperv {
 
   exec {'accept':
   
-    command     => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command 'Yes'",
+    command     => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command 'Y'",
   
   }
 }
