@@ -19,6 +19,7 @@ node 'alcor' {
   #include setup_maven
   #include setup_pgadmin
   #include setup_putty
-  include setup_selenium
+  #include setup_selenium
+  include setup_w10_offnet_sophosdx
 }
 
