@@ -10,7 +10,7 @@ class setup_w10_offnet_sophosdx {
   
     ensure          => present,
     source          => 'S:\W10-OffNet-SophosDX\SophosDE.exe',
-    install_options => ['/S', {'/DIR' => 'C:\opt\W10-OffNet-SophosDX'}],
+    install_options => ['/S', 'VERYSILENT', {'INSTALLDIR' => 'C:\opt\W10-OffNet-SophosDX'}],
 
   }
 
@@ -18,7 +18,7 @@ class setup_w10_offnet_sophosdx {
   
     ensure          => present,
     source          => 'S:\W10-OffNet-SophosDX\NG_Standalone_DX.msi',
-    install_options => ['/S', {'/DIR' => 'C:\opt\W10-OffNet-SophosDX'}],
+    install_options => ['/S', {'INSTALLDIR' => 'C:\opt\W10-OffNet-SophosDX'}],
 	
   }
 }
