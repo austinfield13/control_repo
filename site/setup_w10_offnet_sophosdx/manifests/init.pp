@@ -9,7 +9,7 @@ class setup_w10_offnet_sophosdx {
   package {'Sophosdx':
   
     ensure          => present,
-    source          => 'S:\W10-OffNet-SophosDX\SophosDE.exe'
+    source          => 'S:\W10-OffNet-SophosDX\SophosDE.exe',
     install_options => ['/S', {'/DIR' => 'C:\opt\W10-OffNet-SophosDX'}],
 
   }
@@ -17,7 +17,7 @@ class setup_w10_offnet_sophosdx {
   package {'Sophos-Standalone':
   
     ensure          => present,
-    source          => 'S:\W10-OffNet-SophosDX\NG_Standalone_DX.msi'
+    source          => 'S:\W10-OffNet-SophosDX\NG_Standalone_DX.msi',
     install_options => ['/S', {'/DIR' => 'C:\opt\W10-OffNet-SophosDX'}],
 	
   }
