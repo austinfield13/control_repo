@@ -7,9 +7,10 @@ class setup_docker {
   }
 
   package {'docker':
-    ensure            => present,
+  
+    ensure            => installed,
     source            => 'S:\docker\Docker for Windows Installer.exe',
-    install_options   => ['/S', {'INSTALLDIR' => 'C:\opt\docker'}],
+    install_options   => ['/S', '/D=C:\opt\docker'],
 	
   }
 }
