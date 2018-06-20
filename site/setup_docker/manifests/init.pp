@@ -10,7 +10,7 @@ class setup_docker {
   
     ensure            => installed,
     source            => 'S:\docker\Docker for Windows Installer.exe',
-    install_options   => ['/SP-', 'VERYSILENT', {'/DIR' => 'C:\opt\docker'}],
+    install_options   => ['VERYSILENT', {'/DIR' => 'C:\opt\docker'}],
 	
   }
 }
