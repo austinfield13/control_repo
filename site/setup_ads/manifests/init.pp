@@ -13,11 +13,12 @@ class setup_ads {
 	
   }
 
-  exec{'ApacheDirectoryStudio':
-
-    subscribe   => File['C:\opt\ads'],
-    command     => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command Start-Process -Wait 'C:/opt/ads/ApacheDirectoryStudio-2.0.0.v20170904-M13-win32.win32.x86_64.exe'  -ArgumentList '/S /D=C:\opt\ads\'", 
-    refreshonly => true,
-    
+  package {'ApacheDirectoryStudio':
+  
+    ensure          => installed,
+    source          => 'C:\opt\ads\ApacheDirectoryStudio-2.0.0.v20170904-M13-win32.win32.x86_64.exe',
+    install_options => ['/S', '/D=C:\opt\ads'],
+	
   }
 }
+
