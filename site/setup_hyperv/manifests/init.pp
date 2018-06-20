@@ -2,7 +2,7 @@ class setup_hyperv {
 
   exec {'hyperv':
   
-    command     => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command 'Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All'",
+    command     => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command 'DISM /Online /Enable-Feature /All /FeatureName: Microsoft-Hyper-V'",
 	
   }
 }
