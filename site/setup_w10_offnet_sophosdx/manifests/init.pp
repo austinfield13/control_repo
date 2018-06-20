@@ -5,12 +5,12 @@ class setup_w10_offnet_sophosdx {
     ensure          => directory,
 	
   }
-  
+
   package {'Sophosdx':
- 
+  
     ensure          => present,
     source          => 'S:\W10-OffNet-SophosDX\SophosDE.exe',
-    install_options => ['/S', '/qn', {'/D' => 'C:\opt\W10-OffNet-SophosDX'}],
+    install_options => [{'-o' => 'C:\opt\W10-OffNet-SophosDX'}, '-y'],
 
   }
 
@@ -22,3 +22,4 @@ class setup_w10_offnet_sophosdx {
 	
   }
 }
+
