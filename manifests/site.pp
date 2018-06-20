@@ -13,13 +13,13 @@ node 'alcor' {
   #include setup_git
   #include setup_gpg
   #include setup_hipchat
-  #include setup_hyperv
+  include setup_hyperv
   #include setup_jetbrains
   #include setup_kse
   #include setup_maven
   #include setup_pgadmin
   #include setup_putty
   #include setup_selenium
-  include setup_w10_offnet_sophosdx
+  #include setup_w10_offnet_sophosdx
 }
 
