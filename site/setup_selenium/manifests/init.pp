@@ -8,21 +8,21 @@ class setup_selenium {
 
   file {'C:\opt\selenium\chrome':
   
-    ensure           => present,
+    ensure           => directory,
     source           => 'S:\selenium\chrome',
 	
   }
 
   file {'C:\opt\selenium\firefox':
   
-    ensure           => present,
+    ensure           => directory,
     source           => 'S:\selenium\firefox',
 	
   }
 
   file {'C:\opt\selenium\IE':
   
-    ensure           => present,
+    ensure           => directory,
     source           => 'S:\selenium\IE',
 	
   }
