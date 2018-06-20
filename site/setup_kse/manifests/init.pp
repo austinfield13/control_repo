@@ -2,15 +2,15 @@ class setup_kse {
 
   file {'C:\opt\kse':
   
-    ensure          => directory,
+    ensure         => directory,
    
   }
 
   package {'kse':
   
-    ensure          => installed,
-    source          => 'S:\kse\kse-532-setup.exe',
-    install_options => ['/S', {'/DIR' => 'C:\opt\kse'}]
+    ensure         => installed,
+    source         => 'S:\kse\kse-532-setup.exe',
+    install_optons => ['/S', '/D=C:\opt\kse'}]
 	
   }
 }
