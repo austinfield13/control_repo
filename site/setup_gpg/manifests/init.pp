@@ -10,7 +10,8 @@ class setup_gpg {
 
     ensure          => installed,
     source          => 'S:/gpg/gpg4win-3.1.0.exe',
-    install_options => ['/SP-', '/VERYSILENT',{'/DIR' => 'C:\opt\gpg'}, {'/LOADINF' => 'S:\git\git-install.ini'}],
+    install_options => ['/S', '/D=C:\opt\gpg'],
 
   }
 }
+
