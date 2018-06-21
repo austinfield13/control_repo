@@ -1,4 +1,4 @@
-class setup_7zip{
+class ngc_7zip{
 
   file {'C:\opt\7zip':
 
