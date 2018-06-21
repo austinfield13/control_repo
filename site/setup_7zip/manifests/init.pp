@@ -1,6 +1,6 @@
 class setup_7zip{
 
-  file {'C:\opt\7zipp':
+  file {'C:\opt\7zip':
   
     ensure          => directory,
     
