@@ -1,4 +1,4 @@
-class setup_atom {
+class ngc_atom {
 
   file {'C:\opt\atom':
 
