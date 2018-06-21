@@ -2,7 +2,7 @@ class ngc_maven {
 
   file {'C:\opt\maven':
     
-	  ensure      => directory,
+    ensure      => directory,
 	
   }
   
