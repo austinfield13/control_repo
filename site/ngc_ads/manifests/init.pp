@@ -1,5 +1,5 @@
 
-class setup_ads {
+class ngc_ads {
 
   file {'C:\opt\ads':
 
