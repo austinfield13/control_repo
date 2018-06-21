@@ -1,8 +1,8 @@
-class setup_docker {
+class ngc_docker {
 
   file {'C:\opt\docker':
     
-	  ensure            => directory,
+    ensure            => directory,
 	
   }
 
