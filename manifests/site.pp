@@ -3,23 +3,23 @@ node default {
   #include setup_python
 }
 node 'alcor' {
-  #include setup_java
-  #include setup_eclipse
-  include setup_7zip
-  #include setup_atom
-  #include setup_ads
-  #include setup_docker
-  #include setup_firefox
-  #include setup_git
-  #include setup_gpg
-  #include setup_hipchat
-  #include setup_hyperv
-  #include setup_jetbrains
-  #include setup_kse
-  #include setup_maven
-  #include setup_pgadmin
-  #include setup_putty
-  #include setup_selenium
-  #include setup_w10_offnet_sophosdx
+  include ngc_java
+  include ngc_eclipse
+  include ngc_7zip
+  include ngc_atom
+  include ngc_ads
+  #include ngc_docker
+  include ngc_firefox
+  include ngc_git
+  include ngc_gpg
+  include ngc_hipchat
+  #include ngc_hyperv
+  include ngc_jetbrains
+  include ngc_kse
+  include ngc_maven
+  include ngc_pgadmin
+  include ngc_putty
+  include ngc_selenium
+  #include ngc_w10_offnet_sophosdx
 }
 
