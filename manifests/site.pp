@@ -6,3 +6,6 @@ node 'alcor' {
   include ngc_7zip
 }
 
+node 'fulu' {
+  include role::base
+}
