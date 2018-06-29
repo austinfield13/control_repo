@@ -1,4 +1,4 @@
-class setup_w10_offnet_sophosdx {
+class ngc_w10_offnet_sophosdx {
 
   file {'C:\opt\W10-OffNet-SophosDX':
   
