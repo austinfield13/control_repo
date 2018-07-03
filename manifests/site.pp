@@ -3,7 +3,7 @@ node default {
   #include setup_python
 }
 node 'alcor' { 
-  include ngc_7zip
+  include role::base
 }
 
 node 'fulu' {
