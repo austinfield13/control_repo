@@ -31,7 +31,7 @@ class ngc_galaxy {
 
 	exec {'Activate Office Part 1':
 	
-	  command    => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command 'cd 'C:\Program Files (x86)\Microsoft Office\Office15\''"
+	  command    => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command " "cd C:\'Program Files (x86)'\'Microsoft Office'\Office15\'"
 	}
 
 	exec {'Activate Office Part 2':
