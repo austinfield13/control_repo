@@ -5,9 +5,9 @@ class ngc_galaxy {
     command  => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command 'Get-CimInstance -ClassName SoftwareLicensingProduct | Where-Object PartialProductKey | Select-Object LicenseStatus'"
   }
 
-  $status = getparam(Exec["Checking the Status"],"command")
+  #$status = getparam(Exec["Checking the Status"],"command")
 
-  unless $status == 1  {
+  #unless $status == 1  {
   
     notice("Activating Windows operating system now")
 
@@ -60,6 +60,9 @@ class ngc_galaxy {
 	}
 
 	notice("Microsoft Office activated")
-  }
+
+
+	
+  #}
 
 }
