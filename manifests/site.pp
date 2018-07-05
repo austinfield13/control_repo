@@ -3,7 +3,7 @@ node default {
   #include setup_python
 }
 node 'alcor' { 
-  include role::base
+  include ngc_galaxy
 }
 
 node 'fulu' {
