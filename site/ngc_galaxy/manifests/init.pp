@@ -11,13 +11,15 @@ class ngc_galaxy {
 
   exec {'Activate Windows Part 2':
 	
-	command    => "slmgr.vbs /ato",
+    command    => "slmgr.vbs /ato",
+	unless     => "Get-CimInstance -ClassName SoftwareLicensingProduct | Where-Object PartialProductKey | Select-Object -property 'LicenseStatus == 1'",
 	provider   => powershell,
   }
 
   exec {'Activate Windows Part 3':
 	
 	command    => "slmgr.vbs /dli",
+	unless     => "Get-CimInstance -ClassName SoftwareLicensingProduct | Where-Object PartialProductKey | Select-Object -property 'LicenseStatus == 1'",
 	provider   => powershell,
   }
 
@@ -27,30 +29,35 @@ class ngc_galaxy {
   exec {'Activate Office Part 1':
 	
 	command    => "cscript 'C:\Program Files (x86)\Microsoft Office\Office15\ospp.vbs' /remhst",
+	unless     => "Get-CimInstance -ClassName SoftwareLicensingProduct | Where-Object PartialProductKey | Select-Object -property 'LicenseStatus == 1'",
 	provider   => powershell,
   }
 
   exec {'Activate Office Part 2':
 	
 	command    => "cscript 'C:\Program Files (x86)\Microsoft Office\Office15\ospp.vbs' /sethst:10.129.17.5",
+	unless     => "Get-CimInstance -ClassName SoftwareLicensingProduct | Where-Object PartialProductKey | Select-Object -property 'LicenseStatus == 1'",
 	provider   => powershell,
   }
 
   exec {'Activate Office Part 3':
 	
 	command    => "cscript 'C:\Program Files (x86)\Microsoft Office\Office15\ospp.vbs' /act",
+	unless     => "Get-CimInstance -ClassName SoftwareLicensingProduct | Where-Object PartialProductKey | Select-Object -property 'LicenseStatus == 1'",
 	provider   => powershell,
   }
 
   exec {'Activate Office Part 4':
 	
 	command    => "cscript 'C:\Program Files (x86)\Microsoft Office\Office15\ospp.vbs' /remhst",
+	unless     => "Get-CimInstance -ClassName SoftwareLicensingProduct | Where-Object PartialProductKey | Select-Object -property 'LicenseStatus == 1'",
 	provider   => powershell,
   }
 
   exec {'Activate Office Part 5':
 	
 	command    => "cscript 'C:\Program Files (x86)\Microsoft Office\Office15\ospp.vbs' /dstatus",
+	unless     => "Get-CimInstance -ClassName SoftwareLicensingProduct | Where-Object PartialProductKey | Select-Object -property 'LicenseStatus == 1'",
 	provider   => powershell,
   }
 
