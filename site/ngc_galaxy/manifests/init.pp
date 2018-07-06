@@ -13,17 +13,20 @@ class ngc_galaxy {
 
     exec {'Activate Windows Part 1':
 	  
-	  command    => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command 'slmgr.vbs /skms 10.129.17.5:1688'"
+	  command    => "slmgr.vbs /skms 10.129.17.5:1688"
+	  provider   => powershell
 	}
 
 	exec {'Activate Windows Part 2':
 	
-	  command    => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command 'slmgr.vbs /ato'"
+	  command    => "slmgr.vbs /ato"
+	  provider   => powershell
 	}
 
 	exec {'Activate Windows Part 3':
 	
-	  command    => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command 'slmgr.vbs /dli'"
+	  command    => "slmgr.vbs /dli"
+	  provider   => powershell
 	}
 
 	notice("Windows operating system activated")
@@ -64,3 +67,4 @@ class ngc_galaxy {
   }
 
 }
+
