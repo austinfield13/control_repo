@@ -40,31 +40,25 @@ class ngc_galaxy {
 
 	exec {'Activate Office Part 2':
 	
-	  command    => "cscript ospp.vbs /remhst",
+	  command    => "cd C:\Program Files (x86)\Microsoft Office\Office15\ | cscript ospp.vbs /sethst:10.129.17.5",
 	  provider   => powershell,
 	}
 
 	exec {'Activate Office Part 3':
 	
-	  command    => "cscript ospp.vbs /sethst:10.129.17.5",
+	  command    => "cd C:\Program Files (x86)\Microsoft Office\Office15\ | cscript ospp.vbs /act",
 	  provider   => powershell,
 	}
 
 	exec {'Activate Office Part 4':
 	
-	  command    => "cscript ospp.vbs /act",
+	  command    => "cd C:\Program Files (x86)\Microsoft Office\Office15\ | cscript ospp.vbs /remhst",
 	  provider   => powershell,
 	}
 
 	exec {'Activate Office Part 5':
 	
-	  command    => "cscript ospp.vbs /remhst",
-	  provider   => powershell,
-	}
-
-	exec {'Activate Office Part 6':
-	
-	  command    => "cscript ospp.vbs /dstatus",
+	  command    => "cd C:\Program Files (x86)\Microsoft Office\Office15\ | cscript ospp.vbs /dstatus",
 	  provider   => powershell,
 	}
 
