@@ -34,7 +34,7 @@ class ngc_galaxy {
 
 	exec {'Activate Office Part 1':
 	
-	  command    => "cd C:\Program Files (x86)\Microsoft Office\Office15\ | cscript ospp.vbs /remhst",
+	  command    => "cscript 'C:\Program Files (x86)\Microsoft Office\Office15\ospp.vbs' /remhst",
 	  provider   => powershell,
 	}
 
