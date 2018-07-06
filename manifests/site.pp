@@ -5,6 +5,9 @@ node default {
 node 'alcor' { 
   include ngc_galaxy
 }
+node 'atlas' {
+  include ngc_galaxy
+}
 
 node 'fulu' {
   include role::base
