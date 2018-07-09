@@ -4,7 +4,7 @@ class ngc_galaxy {
 
   exec {'Check Status':
 	
-    command     => $number = Get-CimInstance -ClassName SoftwareLicensingProduct | Where-Object PartialProductKey | Select-Object -property LicenseStatus| Where-Object{$_.LicenseStatus -ne '1'},
+    command     => "$number = Get-CimInstance -ClassName SoftwareLicensingProduct | Where-Object PartialProductKey | Select-Object -property LicenseStatus| Where-Object{$_.LicenseStatus -ne '1'}",
     provider    => powershell,
   }
   
