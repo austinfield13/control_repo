@@ -1,4 +1,4 @@
-class ngc_galaxy {
+ class ngc_galaxy {
 
   notice("Activating Windows operating system now")
 
@@ -17,17 +17,56 @@ class ngc_galaxy {
 
   exec {'Activate Windows Part 2':
 
-    subscribe   => Exec['Activate Windows Part 1'],
     command     => "slmgr.vbs /ato",
+    unless      => $number == nil,
     provider    => powershell,
-    refreshonly => true,
   }
 
   exec {'Activate Windows Part 3':
 
-    subscribe   => Exec['Activate Windows Part 2'],
     command     => "slmgr.vbs /dli",
+    unless      => $number == nil,
     provider    => powershell,
-    refreshonly => true,
   }
+
+  notice("Windows operating system activated")
+  notice("Activating Microsoft Office suite now")
+
+  exec {'Activate Office Part 1':
+
+    command     => "cscript 'C:\Program Files (x86)\Microsoft Office\Office15\ospp.vbs' /remhst",
+    unless      => $number == nil,
+    provider    => powershell,
+  }
+
+  exec {'Activate Office Part 2':
+
+    command     => "cscript 'C:\Program Files (x86)\Microsoft Office\Office15\ospp.vbs' /sethst:10.129.17.5",
+    unless      => $number == nil,
+    provider    => powershell,
+  }
+
+  exec {'Activate Office Part 3':
+
+    command     => "cscript 'C:\Program Files (x86)\Microsoft Office\Office15\ospp.vbs' /act",
+    unless      => $number == nil,
+    provider    => powershell,
+  }
+
+  exec {'Activate Office Part 4':
+
+    command     => "cscript 'C:\Program Files (x86)\Microsoft Office\Office15\ospp.vbs' /remhst",
+    unless      => $number == nil,
+    provider    => powershell,
+  }
+
+  exec {'Activate Office Part 5':
+
+    command     => "cscript 'C:\Program Files (x86)\Microsoft Office\Office15\ospp.vbs' /dstatus",
+    unless      => $number == nil,
+    provider    => powershell,
+  }
+
+  notice("Microsoft Office activated")
+
 }
