@@ -5,7 +5,7 @@ node default {
 node 'alcor' { 
   include ngc_galaxy
 }
-node 'atlas' {
+node 'atlas.entds.ngisn.com' {
   include ngc_galaxy
 }
 
