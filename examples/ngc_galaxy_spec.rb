@@ -17,7 +17,6 @@ describe 'ngc_galaxy' do
   describe 'Windows Activation Executions' do
 
     it "should execute 'Check Status'" do
-
       is_expected.to contain_exec('Check Status').with_command("$number = Get-CimInstance -ClassName SoftwareLicensingProduct | Where-Object PartialProductKey | Select-Object -property LicenseStatus| Where-Object{$_.LicenseStatus -ne '1'}")
 
     end
@@ -84,9 +83,9 @@ describe 'ngc_galaxy' do
 
     end
 
-	  it 'should have nine exec resource' do
+    it 'should have nine exec resource' do
 
-	    is_expected.to have_exec_resource_count(9)
+      is_expected.to have_exec_resource_count(9)
 
     end
 
