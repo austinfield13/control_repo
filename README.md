@@ -1,3 +1,3 @@
-# control_repo
+# control repo
 
-this is a change
+Organization for Puppet modules
