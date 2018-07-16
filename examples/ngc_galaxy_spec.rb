@@ -23,13 +23,13 @@ describe 'ngc_galaxy' do
     
     it "should execute 'Activate Windows Part 1'" do
 
-      is_expected.to contain_exec('Activate Windows Part 1').with(command => "slmgr.vbs /skms 10.129.17.5:1688", provider => 'powershell', unless => $number == nil)
+      is_expected.to contain_exec('Activate Windows Part 1').with(command => "slmgr.vbs /skms 10.129.17.5:1688", provider => 'powershell', unless => '$number == nil')
 
     end
 
     it "should execute 'Activate Windows Part 2'" do
 
-      is_expected.to contain_exec('Activate Windows Part 2').with(command => "slmgr.vbs /ato", provider => 'powershell', unless => $number == nil)
+      is_expected.to contain_exec('Activate Windows Part 2').with(command => "slmgr.vbs /ato", provider => 'powershell', unless => '$number == nil')
 
     end
 
