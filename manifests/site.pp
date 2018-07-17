@@ -2,13 +2,13 @@ node default {
   include setup_jdk
   #include setup_python
 }
-node 'alcor' { 
+node 'alcor.entds.ngisn.com' { 
   include ngc_galaxy
 }
 node 'atlas.entds.ngisn.com' {
   include ngc_galaxy
 }
 
-node 'fulu' {
+node 'fulu.entds.ngisn.com' {
   include role::base
 }
