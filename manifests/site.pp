@@ -8,7 +8,9 @@ node 'alcor.entds.ngisn.com' {
 node 'atlas.entds.ngisn.com' {
   include ngc_galaxy
 }
-
 node 'fulu.entds.ngisn.com' {
   include role::base
+}
+node 'torcular.entds.ngisn.com'{
+  include ngc_galaxy
 }
