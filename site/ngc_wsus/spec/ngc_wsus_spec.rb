@@ -19,7 +19,7 @@ describe 'ngc_wsus' do
 
     it "should execute the batch file" do
 
-      is_expected.to contain_exec('Execute batch file').with('command' => "powershell -executionpolicy remotesigned -file S:\galaxy\wsus\wsus_mng_iso.bat", 'provider' => 'powershell', 'onlyif' => "(Get-ItemProperty -Path hklm:SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate -Name 'WUServer') -ne 'http://10.129.17.5'")
+      is_expected.to contain_exec('Execute batch file').with('command' => "powershell -executionpolicy remotesigned -file S:\\galaxy\\wsus\\wsus_mng_iso.bat", 'provider' => 'powershell', 'onlyif' => "(Get-ItemProperty -Path hklm:SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate -Name 'WUServer') -ne 'http://10.129.17.5'")
 
     end
 
