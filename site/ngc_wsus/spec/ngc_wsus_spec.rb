@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-
+=begin
 describe 'ngc_wsus' do
 
   on_supported_os.each do |os, os_facts|
@@ -13,7 +13,8 @@ describe 'ngc_wsus' do
 
     end
 
-  end
+ end
+=end
 
   describe 'Batch File Execution' do
 
