@@ -1,7 +1,8 @@
 require 'spec_helper'
 
-=begin
 describe 'ngc_wsus' do
+  
+=begin
 
   on_supported_os.each do |os, os_facts|
 
