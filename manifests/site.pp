@@ -12,5 +12,5 @@ node 'fulu.entds.ngisn.com' {
   include role::base
 }
 node 'torcular.entds.ngisn.com'{
-  include ngc_eclipse
+  include ngc_hyperv
 }
