@@ -35,7 +35,7 @@ describe 'ngc_galaxy' do
 
     it 'should have one exec resource' do
 
-	    is_expected.to have_exec_resource_count(1)
+      is_expected.to have_exec_resource_count(1)
 
     end
 
