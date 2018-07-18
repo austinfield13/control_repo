@@ -3,7 +3,7 @@ class ngc_hyperv {
   exec {'hyperv':
   
     command     => 'DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V',
-    provider    => 'powershell'
+    provider    => 'powershell',
     logoutput   => true,
   }
 
