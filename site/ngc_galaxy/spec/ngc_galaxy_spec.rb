@@ -19,7 +19,7 @@ describe 'ngc_galaxy' do
 
     it "should execute run the execution file" do
 
-      is_expected.to contain_exec('Activate Windows and Office').with('command' => 'powershell -executionpolicy remotesigned -file S:\galaxy\Activate-GalaxyNet.ps1', 'provider' => 'powershell', 'logoutput' => true)
+      is_expected.to contain_exec('Activate Windows and Office').with('command' => 'powershell -executionpolicy remotesigned -file S:\galaxy\Activate-GalaxyNet.ps1', 'provider' => 'powershell', 'onlyif' => "(Get-CimInstance -ClassName SoftwareLicensingProduct | Where-Object PartialProductKey | Select-Object -property LicenseStatus | Where-Object -Property LicenseStatus -ne '1') -ne $null", 'logoutput' => true)
 
     end
 
@@ -35,7 +35,7 @@ describe 'ngc_galaxy' do
 
     it 'should have one exec resource' do
 
-      is_expected.to have_exec_resource_count(1)
+	    is_expected.to have_exec_resource_count(1)
 
     end
 
