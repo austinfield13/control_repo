@@ -165,4 +165,68 @@ class ngc_ca {
     logoutput   => true,
   }
   
+  exec {'ng-22.cer':
+    command     => 'Import-Certificate -Filepath "S:\\ca\\certs\\ng-22.cer" -CertStoreLocation "Cert:\\LocalMachine\\Root"',
+    unless      => 'if((Get-ChildItem -Path "Cert:\\LocalMachine\\Root" | Where-Object {$_.Thumbprint -eq "29D36DF2AAC1D0BDBA8E87AAC8FBF14967D6F103"}) -eq $null){ Exit 1 } else { Exit 0 }',
+    returns     => 0,
+    provider    => powershell,
+    logoutput   => true,
+  }
+  
+  exec {'rootCA-1.cer':
+    command     => 'Import-Certificate -Filepath "S:\\ca\\certs\\rootCA-1.cer" -CertStoreLocation "Cert:\\LocalMachine\\Root"',
+    unless      => 'if((Get-ChildItem -Path "Cert:\\LocalMachine\\Root" | Where-Object {$_.Thumbprint -eq "E7823B68E564687976CEE05473520E8488DA69FA"}) -eq $null){ Exit 1 } else { Exit 0 }',
+    returns     => 0,
+    provider    => powershell,
+    logoutput   => true,
+  }
+  
+  exec {'rootCA-2.cer':
+    command     => 'Import-Certificate -Filepath "S:\\ca\\certs\\rootCA-2.cer" -CertStoreLocation "Cert:\\LocalMachine\\Root"',
+    unless      => 'if((Get-ChildItem -Path "Cert:\\LocalMachine\\Root" | Where-Object {$_.Thumbprint -eq "411657F7832C262F373D8F9E09A1AFC4D0A10A6A"}) -eq $null){ Exit 1 } else { Exit 0 }',
+    returns     => 0,
+    provider    => powershell,
+    logoutput   => true,
+  }
+  
+  #exec {'rootCA-3.cer':
+    #command     => 'Import-Certificate -Filepath "S:\\ca\\certs\\rootCA-3.cer" -CertStoreLocation "Cert:\\LocalMachine\\Root"',
+    #unless      => 'if((Get-ChildItem -Path "Cert:\\LocalMachine\\Root" | Where-Object {$_.Thumbprint -eq "411657F7832C262F373D8F9E09A1AFC4D0A10A6A"}) -eq $null){ Exit 1 } else { Exit 0 }',
+    #returns     => 0,
+    #provider    => powershell,
+    #logoutput   => true,
+  #}
+  
+  exec {'rootCA-4.cer':
+    command     => 'Import-Certificate -Filepath "S:\\ca\\certs\\rootCA-4.cer" -CertStoreLocation "Cert:\\LocalMachine\\Root"',
+    unless      => 'if((Get-ChildItem -Path "Cert:\\LocalMachine\\Root" | Where-Object {$_.Thumbprint -eq "9CC30FC9A4490E1DB4DCEBC0FDB0CC9A701FB66E"}) -eq $null){ Exit 1 } else { Exit 0 }',
+    returns     => 0,
+    provider    => powershell,
+    logoutput   => true,
+  }
+  
+  #exec {'rootCA-5.cer':
+    #command     => 'Import-Certificate -Filepath "S:\\ca\\certs\\rootCA-5.cer" -CertStoreLocation "Cert:\\LocalMachine\\Root"',
+    #unless      => 'if((Get-ChildItem -Path "Cert:\\LocalMachine\\Root" | Where-Object {$_.Thumbprint -eq "EE2AA5E7ED1703EF983D02B49A590696496F5BDD"}) -eq $null){ Exit 1 } else { Exit 0 }',
+    #returns     => 0,
+    #provider    => powershell,
+    #logoutput   => true,
+  #}
+  
+  #exec {'rootCA-6.cer':
+    #command     => 'Import-Certificate -Filepath "S:\\ca\\certs\\rootCA-6.cer" -CertStoreLocation "Cert:\\LocalMachine\\Root"',
+    #unless      => 'if((Get-ChildItem -Path "Cert:\\LocalMachine\\Root" | Where-Object {$_.Thumbprint -eq "EE2AA5E7ED1703EF983D02B49A590696496F5BDD"}) -eq $null){ Exit 1 } else { Exit 0 }',
+    #returns     => 0,
+    #provider    => powershell,
+    #logoutput   => true,
+  #}
+  
+  #exec {'rootCA-7.cer':
+    #command     => 'Import-Certificate -Filepath "S:\\ca\\certs\\rootCA-7.cer" -CertStoreLocation "Cert:\\LocalMachine\\Root"',
+    #unless      => 'if((Get-ChildItem -Path "Cert:\\LocalMachine\\Root" | Where-Object {$_.Thumbprint -eq "268B97A1E61D25922B14640FE059652E165FC1F7"}) -eq $null){ Exit 1 } else { Exit 0 }',
+    #returns     => 0,
+    #provider    => powershell,
+    #logoutput   => true,
+  #}
+  
 }
