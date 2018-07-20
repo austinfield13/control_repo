@@ -1,27 +1,25 @@
 require 'spec_helper'
 
+
 describe 'ngc_wsus' do
+
+  #on_supported_os.each do |os, os_facts|
+
+    #context "on #{os}" do
+
+      #let(:facts) { os_facts }
+
+      #it { is_expected.to compile }
+
+    #end
+
+  #end
   
-=begin
+  describe 'Powershell File Execution' do
 
-  on_supported_os.each do |os, os_facts|
+    it "should execute the wsus.ps1 file" do
 
-    context "on #{os}" do
-
-      let(:facts) { os_facts }
-
-      it { is_expected.to compile }
-
-    end
-
- end
-=end
-
-  describe 'Batch File Execution' do
-
-    it "should execute the batch file" do
-
-      is_expected.to contain_exec('Execute batch file').with('command' => "powershell -executionpolicy remotesigned -file S:\\galaxy\\wsus\\wsus_mng_iso.bat", 'provider' => 'powershell', 'onlyif' => "(Get-ItemProperty -Path hklm:SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate -Name 'WUServer') -ne 'http://10.129.17.5'")
+      is_expected.to contain_exec('Execute WSUS Configuration').with('command' => '& C:\opt\wsus.ps1')
 
     end
 
@@ -35,9 +33,9 @@ describe 'ngc_wsus' do
 
     end
 
-    it 'should have one exec resource' do
+	  it 'should have one exec resource' do
 
-      is_expected.to have_exec_resource_count(1)
+	    is_expected.to have_exec_resource_count(1)
 
     end
 
