@@ -1,4 +1,4 @@
-class ngc_ca-ta{
+class ngc_ca-ta {
 
   exec {'ng-1.cer':
     command     => 'Import-Certificate -Filepath "S:\\ca\\certs\\ng-1.cer" -CertStoreLocation "Cert:\\Trusted Root Certification Authorities\\Certificates"',
