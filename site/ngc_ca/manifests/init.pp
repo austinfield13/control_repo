@@ -15,4 +15,28 @@ class ngc_ca {
     provider    => powershell,
     logoutput   => true,
   }
+  
+  exec {'ng-3.cer':
+    command     => 'Import-Certificate -Filepath "S:\\ca\\certs\\ng-3.cer" -CertStoreLocation "Cert:\\LocalMachine\\Root"',
+    unless      => 'if((Get-ChildItem -Path "Cert:\\LocalMachine\\Root" | Where-Object {$_.Thumbprint -eq "E454AC18FC9AE0173C365E8767B679CFE036E63F"}) -eq $null){ Exit 1 } else { Exit 0 }',
+    returns     => 0,
+    provider    => powershell,
+    logoutput   => true,
+  }
+  
+  #exec {'ng-4.cer':
+    #command     => 'Import-Certificate -Filepath "S:\\ca\\certs\\ng-4.cer" -CertStoreLocation "Cert:\\LocalMachine\\Root"',
+    #unless      => 'if((Get-ChildItem -Path "Cert:\\LocalMachine\\Root" | Where-Object {$_.Thumbprint -eq "E454AC18FC9AE0173C365E8767B679CFE036E63F"}) -eq $null){ Exit 1 } else { Exit 0 }',
+    #returns     => 0,
+    #provider    => powershell,
+    #logoutput   => true,
+  #}
+  
+  exec {'ng-5.cer':
+    command     => 'Import-Certificate -Filepath "S:\\ca\\certs\\ng-5.cer" -CertStoreLocation "Cert:\\LocalMachine\\Root"',
+    unless      => 'if((Get-ChildItem -Path "Cert:\\LocalMachine\\Root" | Where-Object {$_.Thumbprint -eq "D393E0A9869CFAD3FB9BF52E42AB62718E17C412"}) -eq $null){ Exit 1 } else { Exit 0 }',
+    returns     => 0,
+    provider    => powershell,
+    logoutput   => true,
+  }
 }
