@@ -8,7 +8,7 @@ class ngc_ca {
     logoutput   => true,
   }
   
-  exec {'ng-1.cer':
+  exec {'ng-2.cer':
     command     => 'Import-Certificate -Filepath "S:\\ca\\certs\\ng-2.cer" -CertStoreLocation "Cert:\\LocalMachine\\Root"',
     unless      => 'if((Get-ChildItem -Path "Cert:\\LocalMachine\\Root" | Where-Object {$_.Thumbprint -eq "411657F7832C262F373D8F9E09A1AFC4D0A10A6A"}) -eq $null){ Exit 1 } else { Exit 0 }',
     returns     => 0,
