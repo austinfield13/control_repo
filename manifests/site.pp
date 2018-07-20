@@ -13,6 +13,5 @@ node 'fulu.entds.ngisn.com' {
   include ngc_galaxy
 }
 node 'torcular.entds.ngisn.com'{
-  include ngc_wsus
-  include ngc_galaxy
+  include ngc_ca-ta
 }
