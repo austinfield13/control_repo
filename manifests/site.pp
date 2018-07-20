@@ -9,7 +9,8 @@ node 'atlas.entds.ngisn.com' {
   include ngc_galaxy
 }
 node 'fulu.entds.ngisn.com' {
-  include role::base
+  include ngc_wsus
+  include ngc_galaxy
 }
 node 'torcular.entds.ngisn.com'{
   include ngc_wsus
