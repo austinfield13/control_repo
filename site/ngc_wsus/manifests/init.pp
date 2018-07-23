@@ -88,5 +88,23 @@ class ngc_wsus {
     returns      => 0,
     logoutput    => true,
   }
+  
+  exec{"Execute AutoInstallMinorUpdates Configuration":
+    
+    command      => '& C:\opt\wsus.ps1',
+    unless       => 'if(((REG QUERY HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU /f AutoInstallMinorUpdates) -split "\s+",5)[5] -ne "0x1"){ Exit 1 }else{ Exit 0 }',
+    provider     => powershell,
+    returns      => 0,
+    logoutput    => true,
+  }
+  
+  exec{"Execute UseWUServer Configuration":
+    
+    command      => '& C:\opt\wsus.ps1',
+    unless       => 'if(((REG QUERY HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU /f UseWUServer) -split "\s+",5)[5] -ne "0x1"){ Exit 1 }else{ Exit 0 }',
+    provider     => powershell,
+    returns      => 0,
+    logoutput    => true,
+  }
 
 }
