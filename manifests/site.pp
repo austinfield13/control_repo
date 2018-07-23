@@ -15,4 +15,5 @@ node 'fulu.entds.ngisn.com' {
 node 'torcular.entds.ngisn.com'{
   include ngc_wsus
   include ngc_hyperv
+  include ngc_ads
 }
