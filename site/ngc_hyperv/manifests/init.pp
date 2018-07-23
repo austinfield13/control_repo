@@ -9,9 +9,4 @@ class ngc_hyperv {
     returns     => 0,
   }
 
-  #exec {'accept':
-  
-    #command     => "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command 'Y'",
-  
-  #}
 }
