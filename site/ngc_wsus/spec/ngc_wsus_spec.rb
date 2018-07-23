@@ -3,17 +3,17 @@ require 'spec_helper'
 
 describe 'ngc_wsus' do
 
-  on_supported_os.each do |os, os_facts|
+  #on_supported_os.each do |os, os_facts|
 
-    context "on #{os}" do
+    #context "on #{os}" do
 
-      let(:facts) { os_facts }
+      #let(:facts) { os_facts }
 
-      it { is_expected.to compile }
+      #it { is_expected.to compile }
 
-    end
+    #end
 
-  end
+  #end
   
   describe 'Powershell File Execution' do
 
@@ -87,15 +87,15 @@ describe 'ngc_wsus' do
 
   describe 'resources' do
 
-    it 'should have one resource' do
+    it 'should have eleven resources' do
 
-      is_expected.to have_resource_count(1)
+      is_expected.to have_resource_count(11)
 
     end
 
-	  it 'should have one exec resource' do
+	  it 'should have eleven exec resources' do
 
-	    is_expected.to have_exec_resource_count(1)
+	    is_expected.to have_exec_resource_count(11)
 
     end
 
