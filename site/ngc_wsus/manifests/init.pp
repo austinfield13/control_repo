@@ -16,6 +16,7 @@ class ngc_wsus {
     provider     => powershell,
     returns      => 0,
     logoutput    => true,
+  }
     
   exec{"Execute NoAutoUpdate Configuration":
     
@@ -24,6 +25,7 @@ class ngc_wsus {
     provider     => powershell,
     returns      => 0,
     logoutput    => true,
+  }
     
   exec{"Execute AUOptions Configuration":
     
@@ -32,5 +34,6 @@ class ngc_wsus {
     provider     => powershell,
     returns      => 0,
     logoutput    => true,
+  }
 
 }
