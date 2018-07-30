@@ -14,4 +14,5 @@ node 'fulu.entds.ngisn.com' {
 }
 node 'torcular.entds.ngisn.com'{
   include ngc_hyperv
+  include ngc_docker
 }
