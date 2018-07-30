@@ -8,7 +8,7 @@ class ngc_docker {
 
   package {'docker':
 
-    ensure            => installed,
+    ensure            => present,
     source            => 'S:\docker\Docker for Windows Installer.exe',
     #install_options   => ['/SILENT'],
 	
