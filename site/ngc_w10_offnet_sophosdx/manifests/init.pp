@@ -6,11 +6,12 @@ class ngc_w10_offnet_sophosdx {
 	
   }
 
-  package {'Sophosdx':
+  exec {'Sophosdx':
   
-    ensure          => present,
-    source          => 'S:\W10-OffNet-SophosDX\SophosDE.exe',
-    install_options => ['-oC:\opt\W10-OffNet-SophosDX', '-y'],
+    subscribe       => File['C:\opt\W10-OffNet-SophosDX'],
+    command         => '& "S:\W10-OffNet-SophosDX\SophosDE.exe"',
+    provider        => powershell,
+    refreshonly     => true,
 
   }
 
