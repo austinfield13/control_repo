@@ -3,7 +3,7 @@ node default {
   #include setup_python
 }
 node 'alcor.entds.ngisn.com' { 
-  include ngc_galaxy
+  include ngc_w10_offnet_sophosdx
 }
 node 'atlas.entds.ngisn.com' {
   include ngc_galaxy
