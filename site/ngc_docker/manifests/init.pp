@@ -10,7 +10,7 @@ class ngc_docker {
 
     ensure            => installed,
     source            => 'S:\docker\Docker for Windows Installer.exe',
-    install_options   => ['/qn'],
+    install_options   => ['/SILENT'],
 	
   }
 }
