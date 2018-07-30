@@ -6,20 +6,12 @@ class ngc_w10_offnet_sophosdx {
 	
   }
 
-  exec {'Sophosdx':
-  
-    subscribe       => File['C:\opt\W10-OffNet-SophosDX'],
-    command         => '& "S:\W10-OffNet-SophosDX\SophosDE.exe"',
-    provider        => powershell,
-    refreshonly     => true,
+  exec {'SophosDXOffNet':
 
-  }
-
-  package {'Sophos-Standalone':
-  
-    ensure          => present,
-    source          => 'S:\W10-OffNet-SophosDX\NG_Standalone_DX.msi',
-    install_options => ['/qn', {'INSTALLDIR' => 'C:\opt\W10-OffNet-SophosDX'}],
-	
+    subscribe        => File['C:\opt\W10-OffNet-SophosDX'],
+    command          => 'Start-Process S:\W10-OffNet-SophosDX\SOPHOSDXOffNet.BAT'},
+    provider         => powershell,
+    refreshonly      => true,
+    
   }
 }
