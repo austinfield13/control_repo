@@ -3,7 +3,7 @@ class ngc_disable_notification_center {
   exec{"Create Explorer Key":
   
     command      => 'New-Item -Path HKCU:\SOFTWARE\Policies\Microsoft\Windows\ -ItemType Directory -Name Explorer',
-    unless       => 'Test-Path HKCU:\SOFTWARE\Policies\Microsoft\Windows\Explorer',
+    unless       => 'if((Test-Path HKCU:\SOFTWARE\Policies\Microsoft\Windows\Explorer) -eq true){ Exit 0 }else{ Exit 1 }',
     provider     => powershell,
     returns      => 0,
     logoutput    => true,
