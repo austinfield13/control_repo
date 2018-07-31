@@ -13,6 +13,5 @@ node 'fulu.entds.ngisn.com' {
   include ngc_galaxy
 }
 node 'torcular.entds.ngisn.com'{
-  include ngc_hyperv
-  include ngc_docker
+  include ngc_disable_notification_center
 }
