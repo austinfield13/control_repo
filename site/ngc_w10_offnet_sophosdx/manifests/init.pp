@@ -1,17 +1,11 @@
 class ngc_w10_offnet_sophosdx {
 
-  file {'C:\opt\W10-OffNet-SophosDX':
-  
-    ensure          => directory,
-	
-  }
-
   exec {'SophosDXOffNet':
 
-    subscribe        => File['C:\opt\W10-OffNet-SophosDX'],
-    command          => 'Start-Process S:\W10-OffNet-SophosDX\SOPHOSDXOffNet.BAT',
+    command          => '& S:\W10-OffNet-SophosDX\InstallSophos.ps1',
     provider         => powershell,
-    refreshonly      => true,
-    
+    unless           => 'if ([System.IO.Directory]::Exists("c:\\Program Files\\Sophos")){Exit 0}else{Exit 1}',
+    returns          => 0,
+
   }
 }
