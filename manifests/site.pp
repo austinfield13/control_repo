@@ -13,5 +13,5 @@ node 'fulu.entds.ngisn.com' {
   include ngc_galaxy
 }
 node 'torcular.entds.ngisn.com'{
-  include ngc_disable_notification_center
+  include profile::ngc_wsus
 }
