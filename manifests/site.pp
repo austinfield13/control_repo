@@ -1,6 +1,4 @@
 node default {
-  include setup_jdk
-  #include setup_python
 }
 node 'alcor.entds.ngisn.com' { 
   include ngc_w10_offnet_sophosdx
