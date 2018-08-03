@@ -9,15 +9,15 @@ class profile::ngc_wsus {
   registry_value {'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\WUServer':
   
     ensure       => present,
-	type         => REG_SZ,
-	data         => 'http://10.129.17.5',
+    type         => string,
+    data         => 'http://10.129.17.5',
   }
 
   registry_value {'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\WUStatusServer':
   
     ensure       => present,
-	type         => REG_SZ,
-	data         => 'http://10.129.17.5',
+    type         => string,
+    data         => 'http://10.129.17.5',
   }
 
   #exec{"Execute WUServer Configuration":
