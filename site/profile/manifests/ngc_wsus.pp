@@ -55,7 +55,7 @@ class profile::ngc_wsus {
   
     ensure       => present,
 	type         => dword,
-	data         => '16',
+	data         => '22',
   }
 
   #exec{"Execute DetectionFrequency Configuration":
