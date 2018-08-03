@@ -1,21 +1,17 @@
 class ngc_wsus {
 
-  exec{"Execute WUServer Configuration":
-    
-    command      => '& S:\galaxy\wsus\wsus.ps1',
-    unless       => 'if(((REG QUERY HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\ /f WUServer) -split "\s+",5)[5] -ne "http://10.129.17.5"){ Exit 1 }else{ Exit 0 }',
-    provider     => powershell,
-    returns      => 0,
-    logoutput    => true,  
-  }
+  registry_value {'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\WUServer':
   
-  exec{"Execute WUStatusServer Configuration":
-    
-    command      => '& S:\galaxy\wsus\wsus.ps1',
-    unless       => 'if(((REG QUERY HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\ /f WUStatusServer) -split "\s+",5)[5] -ne "http://10.129.17.5"){ Exit 1 }else{ Exit 0 }',
-    provider     => powershell,
-    returns      => 0,
-    logoutput    => true,
+    ensure       => present,
+	type         => REG_SZ,
+	data         => http://10.129.17.5,
+  }
+
+  registry_value {'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\WUStatusServer':
+  
+    ensure       => present,
+	type         => REG_SZ,
+	data         => http://10.129.17.5,
   }
     
   exec{"Execute NoAutoUpdate Configuration":
