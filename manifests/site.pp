@@ -14,5 +14,5 @@ node 'torcular.entds.ngisn.com'{
   include profile::ngc_wsus
 }
 node 'capella.entds.ngisn.com'{
-  include profile::ngdc_disable_notification_center
+  include profile::ngc_disable_notification_center
 }
