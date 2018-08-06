@@ -6,7 +6,7 @@ class profile::puppetboard {
 
   class { 'puppetboard':
 
-    report_count       => 40,
+    reports_count       => 40,
     manage_git         => true,
     manage_virtualenv  => true,
   }
