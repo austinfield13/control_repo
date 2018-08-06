@@ -1,5 +1,5 @@
 class {'puppetboard':
-  class { 'apache': 
+  class { 'apache': }
   class { 'apache::mod::wsgi': }
   class { 'puppetboard':
     report_count  => 40,
