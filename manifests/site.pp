@@ -16,3 +16,6 @@ node 'torcular.entds.ngisn.com'{
 node 'capella.entds.ngisn.com'{
   include profile::ngc_disable_notification_center
 }
+node 'mizar.entds.ngisn.com'{
+  include puppetboard
+}
