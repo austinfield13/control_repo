@@ -18,4 +18,5 @@ node 'capella.entds.ngisn.com'{
 }
 node 'mizar.entds.ngisn.com'{
   include profile::puppetboard
+  include profile::puppetdb
 }
