@@ -7,6 +7,10 @@ mod 'puppet-puppetboard',    '4.1.0'
 mod 'stankevich-python',     '1.19.0'
 mod 'stahnma-epel',          '1.3.0'
 mod 'puppetlabs-vcsrepo',    '2.3.0'
+mod 'puppetlabs-inifile',    '2.3.0'
+mod 'puppetlabs-apt',        '5.0.1'
+mod 'puppetlabs-postgresql', '5.8.0'
+mod 'puppetlabs-firewall',   '1.12.0'
 mod 'puppetlabs-puppetdb',   '7.0.1'
 
 
