@@ -13,7 +13,7 @@ class profile::puppetboard {
 
   class { 'puppetboard::apache::vhost':
 
-    vhost_name         => 'mizar.entds.ngisn.com',
+    vhost_name         => 'localhost',
     port               => 80,
 
   }
