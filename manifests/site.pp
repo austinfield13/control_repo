@@ -17,6 +17,6 @@ node 'capella.entds.ngisn.com'{
   include profile::ngc_disable_notification_center
 }
 node 'mizar.entds.ngisn.com'{
-  include profile::puppetboard
-  include profile::puppetdb
+  #include profile::puppetboard
+  #include profile::puppetdb
 }
