@@ -17,5 +17,24 @@ class profile::puppetboard {
     port               => 80,
 
   }
+  
+  firewall { '500 allow PuppetBoard output':
+    
+    chain   => 'OUTPUT',
+    state   => ['NEW'],
+    dport   => '80',
+    proto   => 'tcp',
+    action  => 'accept',
+  }
+  
+  firewall { '500 allow PuppetBoard input':
+  
+    chain   => 'INPUT',
+    state   => ['NEW'],
+    dport   => '80',
+    proto   => 'tcp',
+    action  => 'accept',
+  }
+    
 
 }
