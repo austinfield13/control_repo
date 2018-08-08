@@ -12,5 +12,6 @@ mod 'puppet-puppetboard'
 mod 'stankevich-python'
 mod 'stahnma-epel'
 mod 'puppetlabs-vcsrepo'
+mod 'puppetlabs-apache'
 
 
