@@ -2,7 +2,10 @@ class profile::puppetboard {
 
   class { 'apache': }
 
-  class { 'apache::mod::wsgi': }
+  class { 'apache::mod::wsgi':
+  
+    wsgi_socket_prefix  => '/var/run/wsgi', 
+  }
 
   class { 'puppetboard':
 
