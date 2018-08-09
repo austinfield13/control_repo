@@ -11,7 +11,7 @@ node 'fulu.entds.ngisn.com' {
   include ngc_galaxy
 }
 node 'torcular.entds.ngisn.com'{
-  include profile::ngc_wsus
+  include profile::ngc_hyperv_users
 }
 node 'capella.entds.ngisn.com'{
   include profile::ngc_disable_notification_center
