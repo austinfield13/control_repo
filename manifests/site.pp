@@ -1,6 +1,7 @@
 node default {
 }
 node 'alcor.entds.ngisn.com' {
+  include profile::ngc_hyperv
   include profile::ngc_hyperv_users
 }
 node 'atlas.entds.ngisn.com' {
